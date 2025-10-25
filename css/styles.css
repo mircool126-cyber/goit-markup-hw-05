@@ -202,11 +202,12 @@ background-repeat: no-repeat;
   margin-bottom: 48px; 
   
 }
-
 .hero-btn {
-  display: inline-block;
-  width: 169px;              /* ✅ фіксована ширина */
-  height: 56px;              /* ✅ фіксована висота */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 169px;
+  height: 56px;
   background-color: #4d5ae5;
   color: #fff;
   font-size: 16px;
@@ -214,21 +215,20 @@ background-repeat: no-repeat;
   line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  text-align: center;
-  text-decoration: none;     /* прибирає підкреслення */
-  vertical-align: middle;    /* вирівнює текст */
-  padding: 0;                /* обнуляємо, бо тепер фіксовані розміри */
-  display: flex;             /* центруємо текст */
-  align-items: center;
-  justify-content: center;
+  border: none;
+  text-decoration: none;
   transition: background-color 250ms ease;
 }
 
+
 .hero-btn:hover {
   background-color: #404bbf;
+  border: none;
 }
+
 .hero-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 /* Features-block */
