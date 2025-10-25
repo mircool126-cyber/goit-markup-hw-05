@@ -204,24 +204,25 @@ background-repeat: no-repeat;
 }
 
 .hero-btn {
-  display: inline-block;
-  width: 169px;              /* ✅ фіксована ширина */
-  height: 56px;              /* ✅ фіксована висота */
-  background-color: #4d5ae5;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;     /* прибирає підкреслення */
-  vertical-align: middle;    /* вирівнює текст */
-  padding: 0;                /* обнуляємо, бо тепер фіксовані розміри */
-  display: flex;             /* центруємо текст */
-  align-items: center;
-  justify-content: center;
-  transition: background-color 250ms ease;
+ 
+font-family: 'Roboto';
+font-weight: 500;
+font-size: 16px;
+line-height: 1.18;
+letter-spacing: 0.04em;
+background: #4D5AE5;
+color:#FFFFFF;
+border-radius: 4px;
+border-color: transparent;
+
+padding-top: 16px;
+padding-right: 30px;
+padding-bottom: 16px;
+padding-left: 30px;
+margin: 0 auto;
+display: block;
+
+transition: background-color var(--transition)
 }
 
 .hero-btn:hover {
@@ -737,7 +738,7 @@ position: absolute;
 }
 
 .form-field {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   
 }
 
