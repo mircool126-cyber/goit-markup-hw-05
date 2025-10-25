@@ -687,26 +687,29 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* ===== CLOSE BUTTON ===== */
 .modal-close-btn {
   position: absolute;
-  top: 24px;              /* ✅ відстань згори */
-  right: 24px;            /* ✅ відстань справа */
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #e7e9fc; /* ✅ фон */
-  border: 1px solid rgba(0, 0, 0, 0.1); /* ✅ рамка */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0; /* обнулення відступів браузера */
   cursor: pointer;
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
 /* 🔹 hover */
 .modal-close-btn:hover {
-  background-color: #404bbf; /* ✅ зміна фону */
-  border: none;              /* ✅ прибирає рамку */
+  background-color: #404bbf;
+  border: none;
 }
 /* 🔹 focus */
 .modal-close-btn:focus {
