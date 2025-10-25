@@ -663,67 +663,63 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===== MODAL BACKDROP ===== */
-.backdrop {
-  position: absolute ;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(46, 47, 66, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 250ms ease, visibility 250ms ease;
-}
+
 
 .modal-window {
-  position: absolute;
+  position: fixed; /* фіксоване позиціювання */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
   background: #fcfcfc;
+  border-radius: 4px;
+  padding: 72px 24px 24px;
   box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px;
 }
 
 /* ===== CLOSE BUTTON ===== */
 .modal-close-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 24px;              /* ✅ відстань згори */
+  right: 24px;            /* ✅ відстань справа */
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  background-color: #e7e9fc; /* ✅ фон */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* ✅ рамка */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0;
   cursor: pointer;
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover,
+/* 🔹 hover */
+.modal-close-btn:hover {
+  background-color: #404bbf; /* ✅ зміна фону */
+  border: none;              /* ✅ прибирає рамку */
+}
+/* 🔹 focus */
 .modal-close-btn:focus {
-  background-color: #404bbf;
-  border: none;
+  background-color: #404bbf; /* ✅ зміна фону */
+  border: none;              /* ✅ прибирає рамку */
 }
 
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
-  fill: #ffffff;
+/* 🔹 focus */
+.modal-close-btn:focus {
+  background-color: #404bbf; /* ✅ зміна фону */
+  border: none;              /* ✅ прибирає рамку */
+}
+/* 🔹 іконка всередині */
+.modal-close-icon {
+  fill: currentColor;
 }
 
 /* ===== FORM ELEMENTS ===== */
@@ -927,10 +923,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Модалка після футера */
 .backdrop.is-hidden .modal {
-transform: translate(-50%, -50%) scale(0);}
-
+transform: translate(-50%, -50%) scale(0);
+position: fixed
+}
 .backdrop {
-  position: absolute;
+  position: fixed ;
   top: 0;
   left: 0;
   width: 100%;
@@ -950,24 +947,12 @@ transform: translate(-50%, -50%) scale(0);}
   pointer-events: auto;
 }
 
-/* Кнопка закриття */
-.modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
 
-.modal-close-btn:hover .modal-close-icon {
-  fill: #404bbf;
-}
 
-/* Коли елемент з id="modal" стає ціллю (#modal у адресі) */
-.backdrop:target {
-  opacity: 1;
-  visibility: visible;
-}
 
+
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffffff;
+}
