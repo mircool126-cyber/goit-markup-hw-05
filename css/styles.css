@@ -664,7 +664,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* ===== MODAL BACKDROP ===== */
 .backdrop {
-  position: fixed;
+  position: absolute ;
   top: 0;
   left: 0;
   width: 100%;
@@ -679,7 +679,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
