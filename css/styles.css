@@ -297,6 +297,7 @@ transition: background-color var(--transition)
   clip-path: inset(100%);
   overflow: hidden;
   white-space: nowrap;
+  margin-right: 8px;
 }
 
 
@@ -607,11 +608,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .subscribe-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  gap: 16px; /* Відстань між текстом "Subscribe" і формою */
+
 }
 
 .subscribe-text {
-  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -663,6 +664,15 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .subscribe-icon {
   margin-left: 16px;
   color: #ffffff;
+  transition: color 250ms ease;
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: #404bbf;
+}
+.icon-checkbox{
+  fill: #ffffff;
+
 }
 
 /* ===== MODAL BACKDROP ===== */
@@ -812,10 +822,15 @@ position: absolute;
 }
 
 .form-checkbox-label {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+}
+.form-privacy-link {
+  color: #4d5ae5;
+  line-height: 133%;
 }
 
 .form-checkbox-custom {
@@ -864,9 +879,7 @@ position: absolute;
   background-color: #404bbf;
 }
 
-.form-privacy-link {
-  color: #4d5ae5;
-}
+
 
 
 /* блок соцмереж */
