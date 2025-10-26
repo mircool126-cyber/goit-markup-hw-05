@@ -608,11 +608,10 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .subscribe-container {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Відстань між текстом "Subscribe" і формою */
-
 }
 
 .subscribe-text {
+  margin-bottom: 16px; 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -852,6 +851,17 @@ position: absolute;
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+.privacy-link {
+  color: #4d5ae5; /* синій колір */
+  text-decoration: none; /* прибирає підкреслення */
+  margin-left: 4px; /* невеликий відступ від тексту */
+  transition: color 250ms ease, text-decoration 250ms ease;
+}
+.privacy-link:hover,
+.privacy-link:focus {
+  color: #404bbf; /* темніший синій при наведенні */
+  text-decoration: underline;
 }
 
 /* ===== SUBMIT BUTTON ===== */
